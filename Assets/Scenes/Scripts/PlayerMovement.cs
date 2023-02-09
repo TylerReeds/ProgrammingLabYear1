@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float rotationalSpeed = 75f;
-    [SerializeField] private float jumpVelocity = 10f;
+    [SerializeField] private float jumpVelocity = 5f;
 
     [Header("Checks")]
     [SerializeField] private float distanceToGround = 1.25f;
@@ -20,14 +20,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 turn;
     public float sensitivity = 0.5f;
 
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-    }
 
-    private void Update()
+    }
+    // Update is called once per frame
+    void Update()
     {
         MovePlayer();
         TurnPlayer();
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(Vector3.forward * vInput * Time.deltaTime);
         transform.Translate(Vector3.right * hInput * Time.deltaTime);
+
     }
 
     private void Jump()
