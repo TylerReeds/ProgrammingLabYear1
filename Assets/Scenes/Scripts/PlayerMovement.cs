@@ -20,12 +20,13 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 turn;
     public float sensitivity = 0.5f;
 
+    CharacterStats Stats;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-
     }
     // Update is called once per frame
     void Update()
