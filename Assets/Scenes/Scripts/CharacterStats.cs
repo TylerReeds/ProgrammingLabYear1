@@ -8,9 +8,10 @@ public class CharacterStats : MonoBehaviour
     public int currentHp;
     public int damage;
 
+    public event System.Action<int, int> OnHealthChanged; 
     private void Start()
     {
-        currentHp = 0;
+        currentHp = maxHp;
     }
 
     public virtual void Die()
@@ -23,7 +24,7 @@ public class CharacterStats : MonoBehaviour
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHp -= damage;
 
-        if (currentHp < 0)
+        if (currentHp <= 0)
         {
             Die();
         }
