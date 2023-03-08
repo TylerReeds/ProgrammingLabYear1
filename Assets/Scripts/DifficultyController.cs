@@ -13,7 +13,7 @@ public class DifficultyController : MonoBehaviour
     private void Awake()
     {
        btn = GetComponent<Button>();
-        btn.onClick.AddListener(delegate { LoadDifficultyScene(difficultySelector); });
+       btn.onClick.AddListener(delegate { LoadDifficultyScene(difficultySelector); });
     }
 
     public enum DifficultySelectorEnum
