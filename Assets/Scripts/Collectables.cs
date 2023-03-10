@@ -19,4 +19,8 @@ public class Collectables : MonoBehaviour
     {
         ScoreManager.scoreManager.UpdateScore(scoreCollectable); 
     }
+    public void UpdateHealth()
+    {
+        PlayerManager.playermanager.player.GetComponent<CharacterStats>().RestoreHealth(this.restoreHP);
+    }
 }

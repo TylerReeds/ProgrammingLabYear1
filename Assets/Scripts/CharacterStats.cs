@@ -8,7 +8,7 @@ public class CharacterStats : MonoBehaviour
     public int currentHp;
     public int damage;
 
-    public event System.Action<int, int> OnHealthChanged; 
+    public event System.Action<int, int> OnHealthChanged;
     private void Start()
     {
         currentHp = maxHp;

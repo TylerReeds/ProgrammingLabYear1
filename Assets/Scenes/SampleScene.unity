@@ -1721,27 +1721,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 51be8de1db948034bab7207c5cd3fa49, type: 3}
   m_PrefabInstance: {fileID: 1817232587}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1569460745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569460738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2ef81795d4bc847881f25b410fbac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 5
-  rotationalSpeed: 75
-  jumpVelocity: 5
-  distanceToGround: 1.25
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  turn: {x: 0, y: 0}
-  sensitivity: 0.5
 --- !u!114 &1569460746
 MonoBehaviour:
   m_ObjectHideFlags: 0
