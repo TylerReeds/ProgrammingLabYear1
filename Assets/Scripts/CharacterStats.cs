@@ -54,7 +54,7 @@ public class CharacterStats : MonoBehaviour
     }
     IEnumerator HealthIncrease()
     {
-        Debug.Log("Start Coroutine");
+        //Debug.Log("Start Coroutine");
 
         for (int x = 1; x <= maxHp; x++)
         {
@@ -65,10 +65,10 @@ public class CharacterStats : MonoBehaviour
             }
 
             yield return new WaitForSeconds(0.01f);
-            Debug.Log("HP: " + currentHp + " / " + maxHp);
+            //Debug.Log("HP: " + currentHp + " / " + maxHp);
         }
 
-        Debug.Log("The current health is " + currentHp);
-        Debug.Log("End Coroutine");
+       //Debug.Log("The current health is " + currentHp);
+       //Debug.Log("End Coroutine");
     }
 }
