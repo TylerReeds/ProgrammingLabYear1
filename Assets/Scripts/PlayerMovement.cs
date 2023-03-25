@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistance
 {
     [Header("Movement")]
     [SerializeField] private float movementSpeed = 10f;
@@ -63,4 +63,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = transform.position;
+    }
+
+    public void LoadData(GameData data)
+    {
+        transform.position = data.playerPosition;
+    }
 }
