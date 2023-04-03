@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour, IDataPersistance
 
     CharacterStats Stats;
 
+    public GameObject projectile;
+    public Transform projectilePos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,18 @@ public class PlayerMovement : MonoBehaviour, IDataPersistance
 
     }
 
+    void RestoreHealth()
+    {
+        if (Inventory.inventory.consumableItemsController.GetItem("Heart").GetOwnedQuantity() != 0)
+        {
+            Inventory.inventory.consumableItemsController.UseItem("Heart");
+        }
+    }
+    private void Shoot()
+    {
+        Rigidbody rbBullet = Instantiate(projectile, projectilePos.position, Quaternion.identity).GetComponent<Rigidbody>();
+        rbBullet.AddForce(Vector3.forward * 32f, ForceMode.Impulse);
+    }
     public void SaveData(ref GameData data)
     {
         data.playerPosition = transform.position;
